@@ -1,5 +1,6 @@
 package com.peterjxl.boot;
 
+import ch.qos.logback.core.db.DBHelper;
 import com.peterjxl.boot.bean.Pet;
 import com.peterjxl.boot.bean.User;
 import com.peterjxl.boot.config.MyConfig;
@@ -39,5 +40,14 @@ public class MainApplication {
         Pet tom = run.getBean("tom", Pet.class);
         System.out.println("组件：user01.getPet() == tom :" + ( user01.getPet() == tom ));    //运行结果：ture
 
+        // @Import注解
+        System.out.println("=========");
+        String[] beanNamesForType = run.getBeanNamesForType(User.class);
+        for (String s : beanNamesForType) {
+            System.out.println(s);
+        }
+
+        DBHelper bean1 = run.getBean(DBHelper.class);
+        System.out.println(bean1);    //ch.qos.logback.core.db.DBHelper@7e0babb4
     }
 }

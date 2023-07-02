@@ -1,10 +1,12 @@
 package com.peterjxl.boot.config;
 
 
+import ch.qos.logback.core.db.DBHelper;
 import com.peterjxl.boot.bean.Pet;
 import com.peterjxl.boot.bean.User;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 
 /**
@@ -15,6 +17,7 @@ import org.springframework.context.annotation.Configuration;
  *     Lite(proxyBeanMethods = false)  不代理bean的方法
  *     组件依赖必须使用Full模式默认。其他默认是否Lite模式
 */
+@Import({User.class, DBHelper.class})
 @Configuration(proxyBeanMethods = false)
 public class MyConfig {
 
