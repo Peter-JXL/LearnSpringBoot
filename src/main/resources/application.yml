@@ -1,0 +1,28 @@
+person:
+  userName: zhangsan
+  boss: true
+  birth: 2022/5/20
+  age: 18
+  pet:
+    name: 小猫
+    weight: 2
+  interests: [sing, dance, rap, basketball]
+  animal: [阿猫, 阿狗]
+  score:  #多行写法
+    english: 100
+    math: 120
+    chinese: 130
+  salarys:
+    - 1000
+    - 2000
+  allPets:
+    sick:
+      - {name: 小猫, weight: 15}
+      - name: 小狗2
+        weight: 3
+      - name: 小狗3
+        weight: 3
+    healthy:
+      - { name: 大猫, weight: 15 }
+      - { name: 大狗, weight: 15 }
+

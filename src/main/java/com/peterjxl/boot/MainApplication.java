@@ -1,8 +1,8 @@
 package com.peterjxl.boot;
 
+import com.peterjxl.boot.bean.Person;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties;
 import org.springframework.context.ConfigurableApplicationContext;
 
 /**
@@ -14,7 +14,6 @@ public class MainApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext run = SpringApplication.run(MainApplication.class, args);
 
-        String[] beanNamesForType = run.getBeanNamesForType(WebMvcProperties.class);
-        System.out.println("beanNamesForType: " + beanNamesForType.length);
+        System.out.println(run.getBean(Person.class));
     }
 }
