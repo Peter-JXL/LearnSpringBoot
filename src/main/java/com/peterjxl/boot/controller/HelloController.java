@@ -23,4 +23,9 @@ public class HelloController {
         log.info("请求进来了...");
         return "你好, Spring Boot 2!";
     }
+
+    @RequestMapping("/1.jpg")
+    public String img() {
+        return "图片";
+    }
 }

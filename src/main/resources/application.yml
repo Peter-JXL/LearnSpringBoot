@@ -1,5 +1,5 @@
 person:
-  userName: zhangsan
+  user-name: zhangsan
   boss: true
   birth: 2022/5/20
   age: 18
@@ -25,4 +25,8 @@ person:
     healthy:
       - { name: 大猫, weight: 15 }
       - { name: 大狗, weight: 15 }
-
+spring:
+#  mvc:
+#    static-path-pattern: /res/**
+  resources:
+    static-locations: classpath:/haha/
