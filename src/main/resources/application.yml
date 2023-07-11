@@ -30,3 +30,7 @@ spring:
 #    static-path-pattern: /res/**
   resources:
     static-locations: classpath:/haha/
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
