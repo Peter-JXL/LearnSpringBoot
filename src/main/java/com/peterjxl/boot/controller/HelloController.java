@@ -5,6 +5,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
+
 @RestController // @RestController = @Controller + @ResponseBody
 @Slf4j
 public class HelloController {
@@ -30,7 +32,7 @@ public class HelloController {
 
 //    @RequestMapping(value = "/user", method = RequestMethod.GET)
     @GetMapping("/user")
-    public String getUser(){
+    public String getUser(HttpSession session){
         return "GET-张三";
     }
 
