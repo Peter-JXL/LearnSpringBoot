@@ -8,11 +8,15 @@
         <title>测试常用参数注解</title>
     </head>
     <body>
-        <li><a href="/car/3/owner/lisi">测试PathVariable</a></li>
-        <li><a href="/testRequestHeader">测试RequestHeader</a></li>
-        <li><a href="/testRequestParam?age=18&inters=basketball&inters=music">测试RequestParameter</a></li>
-        <li><a href="/testCookieValue">测试testCookieValue</a></li>
-        <li></li>
+        <ul>
+            <li><a href="/car/3/owner/lisi">测试 @PathVariable</a></li>
+            <li><a href="/testRequestHeader">测试 @RequestHeader</a></li>
+            <li><a href="/testRequestParam?age=18&inters=basketball&inters=music">测试 @RequestParameter</a></li>
+            <li><a href="/testCookieValue">测试 @CookieValue</a></li>
+            <li><a href="/cars/sell;low=34;brand=byd,audi,yd">测试 @MatrixVariable</a></li>
+            <li><a href="/cars/sell;low=34;brand=byd;brand=audi;brand=yd">测试 @MatrixVariable</a></li>
+            <li><a href="/boss/1;age=20/2;age=10">测试 @MatrixVariable</a></li>
+        </ul>
 
 
         <form action="/testRequestBody" method="post">
