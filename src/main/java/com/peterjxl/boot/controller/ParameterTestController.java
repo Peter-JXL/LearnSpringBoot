@@ -1,6 +1,7 @@
 package com.peterjxl.boot.controller;
 
 
+import com.peterjxl.boot.bean.Person2;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
@@ -11,6 +12,11 @@ import java.util.Map;
 @RestController
 public class ParameterTestController {
 
+
+    @PostMapping("/saveUser")
+    public Person2 saveUser(Person2 person2) {
+        return person2;
+    }
 
     @GetMapping("/car/{id}/owner/{username}")   //REST风格
     public Map<String, Object> getCar(@PathVariable("id") Integer id,
